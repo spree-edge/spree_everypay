@@ -20,5 +20,8 @@ module SpreeEverypay
     end
 
     config.to_prepare(&method(:activate).to_proc)
+    config.after_initialize do
+      Rails.configuration.spree.payment_methods << ::Spree::Gateway::Everypay
+    end
   end
 end
