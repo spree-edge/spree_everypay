@@ -115,10 +115,6 @@ module ActiveMerchant
         request_method == POST_REQUEST
       end
 
-      def get_request?
-        request_method == GET_REQUEST
-      end
-
       def request_path(token)
         path = @scheme.fetch(:request).fetch(:path)
         path = "/payments/#{token}/capture" if @api_call.eql?(:capture) && token
