@@ -10,10 +10,6 @@ module ActiveMerchant
           json_response
       end
 
-      def payment_state
-        params['status']
-      end
-
       def payment_token
         params['token']
       end
