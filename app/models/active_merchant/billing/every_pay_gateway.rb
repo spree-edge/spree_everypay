@@ -4,7 +4,8 @@ module ActiveMerchant
   module Billing
     class EveryPayGateway < Gateway
       self.display_name = 'EveryPay'
-      self.money_format = :dollars
+      self.money_format = :cents
+      self.supported_cardtypes = %i[visa master]
 
       def initialize(options = {})
         required_options = %i[secret_key gateway_url]
@@ -36,7 +37,7 @@ module ActiveMerchant
         commit(:purchase, params)
       end
 
-      def capture(money, params = {})
+      def capture(money, _response_code, params = {})
         params = params.merge(
           secret_key: @options[:secret_key],
           amount: money,
@@ -47,7 +48,7 @@ module ActiveMerchant
         commit(:capture, params)
       end
 
-      def refund(money, params = {})
+      def refund(money, _response_code, params = {})
         params = params.merge(
           secret_key: @options[:secret_key],
           amount: money,
