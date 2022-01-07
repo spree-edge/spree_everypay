@@ -22,11 +22,11 @@ module Spree
     end
 
     def capture(money, _response_code, gateway_options)
-      provider.capture(money, gateway_options)
+      provider.capture(money, _response_code, gateway_options)
     end
 
     def credit(money, _response_code, gateway_options)
-      provider.refund(money, gateway_options)
+      provider.refund(money, _response_code, gateway_options)
     end
 
     def void(_response_code, gateway_options)
