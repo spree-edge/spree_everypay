@@ -41,7 +41,7 @@ module ActiveMerchant
         params = params.merge(
           secret_key: @options[:secret_key],
           amount: money,
-          token: current_order(params).everypay_token,
+          token: current_payment(params).everypay_token,
           auto_capture: '1'
         )
 
@@ -62,7 +62,7 @@ module ActiveMerchant
         params = params.merge(
           secret_key: @options[:secret_key],
           amount: void_amount(params),
-          token: current_order(params).everypay_token
+          token: current_payment(params).everypay_token
         )
 
         commit(:void, params)
@@ -91,6 +91,7 @@ module ActiveMerchant
         request['Authorization'] = req.basic_auth
         request['Content-Type'] = 'application/x-www-form-urlencoded'
         request.body = req.body unless capture_event?(scheme)
+
         response = https.request(request)
         json_response = parse(response, scheme)
 
@@ -104,11 +105,11 @@ module ActiveMerchant
       end
 
       def save_token(everypay_response, params)
-        current_order(params).update(everypay_token: everypay_response.payment_token)
+        current_payment(params).update(everypay_token: everypay_response.payment_token)
       end
 
-      def current_order(params)
-        ::Spree::Order.find_by(number: params[:order_id]&.split('-'))
+      def current_payment(params)
+        ::Spree::Payment.find_by(number: params[:order_id]&.split('-')) #can be added to payment here
       end
 
       def capture_event?(scheme)
@@ -116,11 +117,11 @@ module ActiveMerchant
       end
 
       def refund_order_token(params)
-        ::Spree::Refund.find(params[:originator][:id]).payment.order.everypay_token
+        ::Spree::Refund.find(params[:originator][:id]).payment.everypay_token
       end
 
       def void_amount(params)
-        (current_order(params).total.to_f * 100).to_i
+         amount(current_payment(params).money)
       end
 
       def parse(response, scheme)
