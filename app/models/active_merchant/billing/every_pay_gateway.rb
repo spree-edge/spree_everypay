@@ -121,7 +121,7 @@ module ActiveMerchant
       end
 
       def void_amount(params)
-         amount(current_payment(params).money)
+        amount(current_payment(params).credit_allowed * 100).to_i
       end
 
       def parse(response, scheme)
