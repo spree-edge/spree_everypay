@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_everypay'
   s.version     = SpreeEverypay.version
-  s.summary     = 'Everypay payment gateway'
+  s.summary     = 'A spree_extension that provides ability to add Everypay payment gateway'
   s.description = 'Everypay payment gateway with spree support'
   s.required_ruby_version = '>= 2.5'
 
