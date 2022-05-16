@@ -1,10 +1,11 @@
-# 🔥 **bluebash-spree-contrib/spree-everypay**
+# **Spree Everypay**
 
-## 🤔 **About the project**
-* Spree extension for adding everypay payment method in spree.
-* For reference(https://docs.everypay.gr/api-reference/)
+## **About**
+A Spree extension that provides support for [Everypay](https://www.everypay.gr/) payment using [Direct API](https://docs.everypay.gr/accept-payments/direct-api/) integration method.
 
-## ⚡ **Installation**
+EveryPay REST API reference is [here](https://docs.everypay.gr/api-reference).
+
+## **Installation**
 
 1. Add this extension to your Gemfile with this line:
 
