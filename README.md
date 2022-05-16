@@ -5,6 +5,13 @@ A Spree extension that provides support for [Everypay](https://www.everypay.gr/)
 
 EveryPay REST API reference is [here](https://docs.everypay.gr/api-reference).
 
+## **Key Features**
+ * Everypay Direct API integration with Spree.
+ * Register everypay as new payment gateway.
+ * Payment and Refund API support for checkout, refund and order cancelation.
+
+## **Demo**
+
 ## **Installation**
 
 1. Add this extension to your Gemfile with this line:
@@ -29,8 +36,6 @@ EveryPay REST API reference is [here](https://docs.everypay.gr/api-reference).
 
   If your server was running, restart it so that it can find the assets properly.
 
-5. Screenshots
- <img width="1000px" src="https://user-images.githubusercontent.com/80692612/161050644-b8594568-a411-4245-8315-afb7588d3a06.png">
 
 ## Contributing
 
@@ -38,6 +43,4 @@ If you'd like to contribute, please take a look at the
 [instructions](CONTRIBUTING.md) for installing dependencies and crafting a good
 pull request.
 
-Copyright (c) 2021 [name of extension creator], released under the New BSD License
-
-Made with ❤️ by **[@bluebash-spree-team](https://github.com/bluebash-spree-contrib)**
+Copyright (c) 2022 Spree Edge, released under the [New BSD License](https://github.com/spree-edge/spree_everypay/blob/master/LICENSE))
