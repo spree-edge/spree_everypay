@@ -13,17 +13,17 @@
       </span>
     </div>
 
-    <div data-hook="card_name" class="form-group col-12">
+    <div data-hook="card_name" class="form-group col-12 pt-2">
       <%= label_tag "card_name#{payment_method.id}", raw(Spree.t(:name) + required_span_tag) %>
       <%= text_field_tag "#{param_prefix}[name]", '', id: "card_name#{payment_method.id}", class: 'required form-control', maxlength: 19 %>
     </div>
 
-    <div data-hook="card_expiration" class="form-group col-6">
+    <div data-hook="card_expiration" class="form-group col-6 pt-2">
       <%= label_tag "card_expiry#{payment_method.id}", raw(Spree.t(:expiration) + required_span_tag) %><br>
       <%= text_field_tag "#{param_prefix}[expiry]", '', id: "card_expiry#{payment_method.id}", class: "required cardExpiry form-control", placeholder: "MM/YYYY" %>
     </div>
 
-    <div data-hook="card_code" class="form-group col-6">
+    <div data-hook="card_code" class="form-group col-6 pt-2">
       <%= label_tag "card_code#{payment_method.id}", raw(Spree.t(:card_code) + required_span_tag) %>
       <%= text_field_tag "#{param_prefix}[verification_value]", '', id: "card_code#{payment_method.id}", class: 'required form-control cardCode', size: 5 %>
     </div>
