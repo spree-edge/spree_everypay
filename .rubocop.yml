@@ -1,6 +1,7 @@
 AllCops:
+  NewCops: enable
   DisplayCopNames: true
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 3.1.0
   Include:
     - '**/Gemfile'
     - '**/Rakefile'
@@ -8,9 +9,6 @@ AllCops:
   Exclude:
     - 'spec/dummy/**/*'
     - 'lib/generators/**/*'
-
-Rails:
-  Enabled: true
 
 Metrics/LineLength:
   Max: 150
