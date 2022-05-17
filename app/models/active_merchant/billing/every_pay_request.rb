@@ -31,11 +31,11 @@ module ActiveMerchant
         payload = {}
         if params[:auto_capture].present?
           payload = {
-            'card_number' => params[:card][:card_number],
+            'card_number' => params[:card]&.card_number,
             'expiration_year' => params[:card][:year],
             'expiration_month' => params[:card][:month],
             'holder_name' => params[:card][:name],
-            'cvv' => params[:card][:cvv],
+            'cvv' => params[:card]&.cvv,
             'amount' => params[:amount],  # need to charge the card
             'description' => params[:order_id],
             'capture' => params[:auto_capture]
