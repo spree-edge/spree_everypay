@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.version     = SpreeEverypay.version
   s.summary     = 'A spree extension that provides support for Everypay as payment gateway'
   s.description = 'Everypay payment gateway with spree support'
-  s.required_ruby_version = '>= 3.1'
+  s.required_ruby_version = '>= 3.0'
 
   s.author    = 'Rahul Singh'
   s.email     = 'rahul@bluebash.co'
