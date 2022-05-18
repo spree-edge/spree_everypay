@@ -12,6 +12,12 @@ EveryPay REST API reference is [here](https://docs.everypay.gr/api-reference).
 
 ## **Demo**
 
+
+
+https://user-images.githubusercontent.com/103247578/169060345-12e33381-d696-456b-935b-7326de2bc2ab.mp4
+
+
+
 ## **Installation**
 
 1. Add this extension to your Gemfile with this line:
