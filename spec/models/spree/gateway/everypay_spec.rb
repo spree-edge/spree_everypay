@@ -12,12 +12,12 @@ describe Spree::Gateway::Everypay do
   describe 'options' do
     it 'include :test => true when server is "test"' do
       gateway.preferred_server = "test"
-      expect(gateway.options[:test]).to be true
+      expect(gateway.options[:server] == "test").to be true
     end
 
     it 'does not include :test when server is "live"' do
       gateway.preferred_server = "live"
-      expect(gateway.options[:test]).to be false
+      expect(gateway.options[:server] == "test").to be false
     end
   end
 end
