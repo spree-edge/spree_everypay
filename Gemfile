@@ -9,7 +9,7 @@ gem 'rails-controller-testing'
 
 group :development, :test do
   gem 'pg'
-  gem 'shoulda-matchers', '~> 5.0'
+  gem 'net-smtp', require: false
 end
 
 gemspec
