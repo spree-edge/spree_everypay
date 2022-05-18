@@ -50,7 +50,7 @@ When testing your applications integration with this extension you may use it's 
 Simply add this require statement to your spec_helper:
 
 ```ruby
-require 'spree_notes/factories'
+require 'spree_everypay/factories'
 ```
 ---
 
