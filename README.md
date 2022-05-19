@@ -56,7 +56,7 @@ Simply add this require statement to your spec_helper:
 require 'spree_everypay/factories'
 ```
 
-**Sandbox account** can be register from [here](https://sandbox-dashboard.everypay.gr/register) and get the secret key that is needed to configure the payment method.
+[Sandbox account](https://sandbox-dashboard.everypay.gr/register) can be register and get the **secret key** that is needed to configure the payment method.
 
 ---
 
